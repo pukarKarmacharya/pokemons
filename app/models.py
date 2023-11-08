@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 
@@ -10,8 +9,8 @@ class Pokemons(Base):
 
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String, nullable=False)
-    image = Column(String, nullable=False)
-    type = Column(String, nullable=False)
+    image = Column(String)
+    type = Column(String)
     
 class User(Base):
     __tablename__ = "users"
