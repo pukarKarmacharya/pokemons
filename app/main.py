@@ -49,7 +49,7 @@ async def home(request: Request):
     r = await client.send(req)
     count = r.json()['count']
     
-    for x in range(1,count):
+    for x in range(1,10):
         pokemon_name = r.json()['results'][x]['name']
         url = r.json()['results'][x]['url']
         req_url = client.build_request('GET', url)
